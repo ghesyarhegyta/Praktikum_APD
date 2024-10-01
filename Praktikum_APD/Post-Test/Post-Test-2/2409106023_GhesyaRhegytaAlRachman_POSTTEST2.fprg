@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowgorithm"/>
+        <attribute name="authors" value="Infinix"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 06:45:12 PM"/>
+        <attribute name="created" value="SW5maW5peDtJTkJPT0tfWDE7MjAyNC0wOS0xNDswNjoxMjoyMCBQTTsyNjg0"/>
+        <attribute name="edited" value="SW5maW5peDtJTkJPT0tfWDE7MjAyNC0wOS0xNjswOTozOTowMCBQTTsyOzI4MDU="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUThCNjFWQ047MjAyNC0wOS0xNzswNjo0NToxMiBQTTsxOzI3NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nim, umur, duadigitnim" type="Integer" array="False" size=""/>
+            <declare name="namalengkap, namapanggilan, prodi" type="String" array="False" size=""/>
+            <declare name="beratbadan, mod1" type="Real" array="False" size=""/>
+            <output expression="&quot;Input nama panjang&quot;" newline="True"/>
+            <input variable="namalengkap"/>
+            <output expression="&quot;Input nama panggilan&quot;" newline="True"/>
+            <input variable="namapanggilan"/>
+            <output expression="&quot;Input nim&quot;" newline="True"/>
+            <input variable="nim"/>
+            <output expression="&quot;Input prodi&quot;" newline="True"/>
+            <input variable="prodi"/>
+            <output expression="&quot;Input Umur&quot;" newline="True"/>
+            <input variable="umur"/>
+            <output expression="&quot;Input berat badan&quot;" newline="True"/>
+            <input variable="beratbadan"/>
+            <output expression="&quot;Input duadigitnim&quot;" newline="True"/>
+            <input variable="duadigitnim"/>
+            <assign variable="mod1" expression="duadigitnim%6"/>
+            <output expression="&quot;nama lengkap saya adalah &quot;&amp;namalengkap&amp;&quot; dengan nim &quot;&amp;nim&amp;&quot; prodi &quot; &amp;prodi&amp;&quot;, saya biasa dipanggil &quot;&amp;namapanggilan&amp;&quot; sekarang saya berumur &quot;&amp;umur&amp;&quot; tahun dan berat saya adalah &quot;&amp;beratbadan&amp;&quot; berikut adalah hasil dari dua digit angka di belakang nim saya jika di modulus dengan 6 adalah &quot;&amp;mod1" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
