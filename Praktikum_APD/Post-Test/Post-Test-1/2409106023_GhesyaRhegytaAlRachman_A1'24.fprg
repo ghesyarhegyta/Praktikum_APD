@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-09 07:01:56 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtSks1VlVBUjE7MjAyNC0wOS0wODswOTo0MToyMyBBTTsyNjY3"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtSks1VlVBUjE7MjAyNC0wOS0wOTswNzowMTo1NiBQTTs2OzI3OTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jpengunjung, upengunjung, i" type="Integer" array="False" size=""/>
+            <declare name="tdiskon, tharga, htotaltiket" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan jumlah pengunjung&quot;" newline="True"/>
+            <input variable="jpengunjung"/>
+            <if expression="jpengunjung &lt; 3">
+                <then>
+                    <output expression="&quot;Pengunjung minimal berjumlah 3 orang&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="tharga" expression="jpengunjung * 60000"/>
+                    <assign variable="tdiskon" expression="0"/>
+                    <for variable="i" start="1" end="jpengunjung" direction="inc" step="1">
+                        <output expression="&quot;Input umur pengunjung ke-i&quot;" newline="True"/>
+                        <input variable="upengunjung"/>
+                        <if expression="upengunjung &lt; 18">
+                            <then>
+                                <assign variable="tdiskon" expression="tdiskon+0.20"/>
+                                <output expression="tdiskon" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="upengunjung &gt;=18 and upengunjung &lt;=25">
+                                    <then>
+                                        <assign variable="tdiskon" expression="tdiskon+0.15"/>
+                                        <output expression="tdiskon" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="tdiskon" expression="tdiskon+0.10"/>
+                                        <output expression="tdiskon" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                    <if expression="tdiskon &gt; 1">
+                        <then>
+                            <assign variable="tdiskon" expression="1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="htotaltiket" expression="tharga * (1-tdiskon)"/>
+                    <output expression="&quot;Total harga yang harus dibayar setelah diskon adalah: &quot;" newline="True"/>
+                    <output expression="htotaltiket" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
