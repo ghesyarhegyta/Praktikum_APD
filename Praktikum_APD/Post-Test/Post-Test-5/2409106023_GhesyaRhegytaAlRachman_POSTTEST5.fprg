@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Infinix"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-07 08:06:47 PM"/>
+        <attribute name="created" value="SW5maW5peDtJTkJPT0tfWDE7MjAyNC0xMC0wNzswNzozMTo0NCBQTTsyNjg2"/>
+        <attribute name="edited" value="SW5maW5peDtJTkJPT0tfWDE7MjAyNC0xMC0wNzswODowNjo0NyBQTTszOzI4MDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="username, password, namakucing, namalama, namabaru" type="String" array="False" size=""/>
+            <declare name="pilihanmenu" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input pilihan menu&#13;&#10;1. Register&#13;&#10;2. Login&#13;&#10;3. Exit&quot;" newline="True"/>
+            <input variable="pilihanmenu"/>
+            <if expression="pilihanmenu == 1">
+                <then>
+                    <output expression="&quot;Register akun&quot;" newline="True"/>
+                    <output expression="&quot;Input username anda&quot;" newline="True"/>
+                    <input variable="username"/>
+                    <output expression="&quot;Input passsword anda&quot;" newline="True"/>
+                    <input variable="password"/>
+                </then>
+                <else>
+                    <if expression="pilihanmenu == 2">
+                        <then>
+                            <output expression="&quot;Login&quot;" newline="True"/>
+                            <output expression="&quot;Input username anda&quot;" newline="True"/>
+                            <input variable="username"/>
+                            <input variable="password"/>
+                            <if expression="(username == &quot;nyonyo&quot;) &amp;&amp; (password == &quot;nyonyo&quot;)">
+                                <then>
+                                    <output expression="&quot;Input pilihan menu&#13;&#10;1. Buat nama kucing&#13;&#10;2. Liat nama-nama kucing&#13;&#10;3. Perbarui data nama kucing&#13;&#10;4. Hapus data nama kucing&#13;&#10;5. Logout&quot;" newline="True"/>
+                                    <input variable="pilihanmenu"/>
+                                    <if expression="pilihanmenu == 1">
+                                        <then>
+                                            <output expression="&quot;buat nama kucing&quot;" newline="True"/>
+                                            <input variable="namakucing"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pilihanmenu == 2">
+                                                <then>
+                                                    <output expression="&quot;Liat nama-nama kucing&quot;" newline="True"/>
+                                                    <output expression="namakucing" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="pilihamenu == 3">
+                                                        <then>
+                                                            <output expression="&quot;Perbarui data nama kucing&quot;" newline="True"/>
+                                                            <output expression="&quot;Inputkan nama kucing lama: &quot;" newline="True"/>
+                                                            <input variable="namalama"/>
+                                                            <output expression="&quot;Inputkan nama kucing baru&quot;" newline="True"/>
+                                                            <input variable="namabaru"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="pilihanmenu == 4">
+                                                                <then>
+                                                                    <output expression="&quot;Input nama kucing&quot;" newline="True"/>
+                                                                    <input variable="namakucing"/>
+                                                                    <output expression="&quot;Nama kucing berhasil dihapus&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="pilihanmenu == 5">
+                                                                        <then>
+                                                                            <output expression="&quot;Logout&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Pilihan menu tidak tersedia&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="pilihanmenu == 3">
+                                <then>
+                                    <output expression="&quot;Anda berhasil keluar program&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Pilihan menu tidak tersedia&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
